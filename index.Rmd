@@ -1,0 +1,76 @@
+---
+title       : Zodiac App Pitch
+subtitle    : 
+author      : Jessica Peterka-Bonetta
+job         : 
+framework   : io2012        # {io2012, html5slides, shower, dzslides, ...}
+highlighter : highlight.js  # {highlight.js, prettify, highlight}
+hitheme     : tomorrow      # 
+widgets     : []            # {mathjax, quiz, bootstrap}
+mode        : selfcontained # {standalone, draft}
+knit        : slidify::knit2slides
+---
+
+## Zodiac App Pitch
+
+This presentation was built as part of the course project for the coursera class "Data Products".  
+
+### The challenge
+ 
+Fill 5 slides without boring the sh** out of you.
+
+#### The solution
+ 
+Fill them with some background info as well as with my initial idea. Lean back, enjoy, it´s gonna be over before you know it. 
+
+---
+
+## How it all begun
+
+I´ve been playing around with APIs (Facebook, Twitter, Instagram) so my initial idea was to build a shiny app which would take an instagram username as an inout and output the following: 
+ 
+1. followers/friends ratio
+2. a super duper google map mapping all posts of the user
+3. the average radius of movement of a user based on the geodata of his posts 
+
+Yeah, I know, it would have been **so cool** to actually implement it! 
+
+#### The problem 
+ 
+The reason why this is not the app you´re playing around with is that I simply couldn´t figure out a way to make it work. I was able to write a code in R which does exactly that, but I failed at translating it into shiny. The deadline approached and I decided to retake the course in order to have more time to get it to work. I´m taking the course for the third time already and I thought I might have to come up with something easier if I ever wanted to actually pass this class. 
+**This is how my new idea was born.**
+
+--- 
+
+## Why zodiac signs?
+
+Not half as cool as my initial idea, the zodiac App has the merit to be easy to code and to hopefully and finally get me through this class.
+
+Also, zodiac signs are extremely important to the world, as some people give it a crucial importance when choosing there significant other. [Here](http://www.heartnsoul.com/zodiac.htm) you can read more on how to find the ideal partner based on zodiac signs. 
+
+### How to use the app
+
+1. Klick on this [link](https://tiagd.shinyapps.io/zodiacApp).
+2. Input a date on the left side.
+3. See the ouput on the right side. 
+
+**That´s it!**
+
+---
+
+## Some R Code
+
+I don´t think the app really needs this presentation to display R code, but as the instructions require it, here you go. 
+Let´s what happens if I input my birthdate: 
+
+```{r}
+library(DescTools)
+# Input birthdate
+date <- "1985-05-05"
+# Output zodiac sign
+zod <- Zodiac(as.Date(date), stringsAsFactors = FALSE)
+zod
+```
+
+#### This is the computation you will find in the server file. Cheers!  
+---

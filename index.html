@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Zodiac App Pitch</title>
+  <meta charset="utf-8">
+  <meta name="description" content="Zodiac App Pitch">
+  <meta name="author" content="Jessica Peterka-Bonetta">
+  <meta name="generator" content="slidify" />
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta http-equiv="X-UA-Compatible" content="chrome=1">
+  <link rel="stylesheet" href="libraries/frameworks/io2012/css/default.css" media="all" >
+  <link rel="stylesheet" href="libraries/frameworks/io2012/css/phone.css" 
+    media="only screen and (max-device-width: 480px)" >
+  <link rel="stylesheet" href="libraries/frameworks/io2012/css/slidify.css" >
+  <link rel="stylesheet" href="libraries/highlighters/highlight.js/css/tomorrow.css" />
+  <base target="_blank"> <!-- This amazingness opens all links in a new tab. -->  <link rel=stylesheet href="./assets/css/ribbons.css"></link>
+
+  
+  <!-- Grab CDN jQuery, fall back to local if offline -->
+  <script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.7.min.js"></script>
+  <script>window.jQuery || document.write('<script src="libraries/widgets/quiz/js/jquery.js"><\/script>')</script> 
+  <script data-main="libraries/frameworks/io2012/js/slides" 
+    src="libraries/frameworks/io2012/js/require-1.0.8.min.js">
+  </script>
+  
+  
+
+</head>
+<body style="opacity: 0">
+  <slides class="layout-widescreen">
+    
+    <!-- LOGO SLIDE -->
+        <slide class="title-slide segue nobackground">
+  <hgroup class="auto-fadein">
+    <h1>Zodiac App Pitch</h1>
+    <h2></h2>
+    <p>Jessica Peterka-Bonetta<br/></p>
+  </hgroup>
+  <article></article>  
+</slide>
+    
+
+    <!-- SLIDES -->
+    <slide class="" id="slide-1" style="background:;">
+  <hgroup>
+    <h2>Zodiac App Pitch</h2>
+  </hgroup>
+  <article data-timings="">
+    <p>This presentation was built as part of the course project for the coursera class &quot;Data Products&quot;.  </p>
+
+<h3>The challenge</h3>
+
+<p>Fill 5 slides without boring the sh** out of you.</p>
+
+<h4>The solution</h4>
+
+<p>Fill them with some background info as well as with my initial idea. Lean back, enjoy, it´s gonna be over before you know it. </p>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-2" style="background:;">
+  <hgroup>
+    <h2>How it all begun</h2>
+  </hgroup>
+  <article data-timings="">
+    <p>I´ve been playing around with APIs (Facebook, Twitter, Instagram) so my initial idea was to build a shiny app which would take an instagram username as an inout and output the following: </p>
+
+<ol>
+<li>followers/friends ratio</li>
+<li>a super duper google map mapping all posts of the user</li>
+<li>the average radius of movement of a user based on the geodata of his posts </li>
+</ol>
+
+<p>Yeah, I know, it would have been <strong>so cool</strong> to actually implement it! </p>
+
+<h4>The problem</h4>
+
+<p>The reason why this is not the app you´re playing around with is that I simply couldn´t figure out a way to make it work. I was able to write a code in R which does exactly that, but I failed at translating it into shiny. The deadline approached and I decided to retake the course in order to have more time to get it to work. I´m taking the course for the third time already and I thought I might have to come up with something easier if I ever wanted to actually pass this class. 
+<strong>This is how my new idea was born.</strong></p>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-3" style="background:;">
+  <hgroup>
+    <h2>Why zodiac signs?</h2>
+  </hgroup>
+  <article data-timings="">
+    <p>Not half as cool as my initial idea, the zodiac App has the merit to be easy to code and to hopefully and finally get me through this class.</p>
+
+<p>Also, zodiac signs are extremely important to the world, as some people give it a crucial importance when choosing there significant other. <a href="http://www.heartnsoul.com/zodiac.htm">Here</a> you can read more on how to find the ideal partner based on zodiac signs. </p>
+
+<h3>How to use the app</h3>
+
+<ol>
+<li>Klick on this <a href="https://tiagd.shinyapps.io/zodiacApp">link</a>.</li>
+<li>Input a date on the left side.</li>
+<li>See the ouput on the right side. </li>
+</ol>
+
+<p><strong>That´s it!</strong></p>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-4" style="background:;">
+  <hgroup>
+    <h2>Some R Code</h2>
+  </hgroup>
+  <article data-timings="">
+    <p>I don´t think the app really needs this presentation to display R code, but as the instructions require it, here you go. 
+Let´s what happens if I input my birthdate: </p>
+
+<pre><code class="r">library(DescTools)
+# Input birthdate
+date &lt;- &quot;1985-05-05&quot;
+# Output zodiac sign
+zod &lt;- Zodiac(as.Date(date), stringsAsFactors = FALSE)
+zod
+</code></pre>
+
+<pre><code>## [1] &quot;Taurus&quot;
+</code></pre>
+
+<h4>This is the computation you will find in the server file. Cheers!</h4>
+
+<hr>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+    <slide class="backdrop"></slide>
+  </slides>
+  <div class="pagination pagination-small" id='io2012-ptoc' style="display:none;">
+    <ul>
+      <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=1 title='Zodiac App Pitch'>
+         1
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=2 title='How it all begun'>
+         2
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=3 title='Why zodiac signs?'>
+         3
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=4 title='Some R Code'>
+         4
+      </a>
+    </li>
+  </ul>
+  </div>  <!--[if IE]>
+    <script 
+      src="http://ajax.googleapis.com/ajax/libs/chrome-frame/1/CFInstall.min.js">  
+    </script>
+    <script>CFInstall.check({mode: 'overlay'});</script>
+  <![endif]-->
+</body>
+  <!-- Load Javascripts for Widgets -->
+  
+  <!-- LOAD HIGHLIGHTER JS FILES -->
+  <script src="libraries/highlighters/highlight.js/highlight.pack.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script>
+  <!-- DONE LOADING HIGHLIGHTER JS FILES -->
+   
+  </html>
